@@ -15,14 +15,30 @@
                         <div class="logo-container">
                             <p><span>P</span>eró</p>
                         </div>
-                        <div class="hamburger-menu">
-                            <img src="/assests/menu.png" alt="menu-icon">
+                        <div class="hamburger-menu"  >
+                            <img onclick="hideShow()" src="/assests/menu.png" alt="menu-icon">
                         </div>
                     </div>
                 </nav>
+                <div class="popup-nav" id="modal">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="dishes.html" target="_self">Dishes</a>
+                        </li>
+                        <li>
+                            <a href="about-us.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="contact-us.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="hero-container">
+            <div class="hero-container" id="dishes-container">
                 <div class="hero-wallpaper">
                     <p> <span>Savor the Taste of Perfection.</span><br>
                         Experience the finest momos crafted with passion, fresh ingredients, and culinary expertise. Step into a world of flavors that will delight your senses.
@@ -35,7 +51,7 @@
                 <div class="food-items chicken">
                     <div class="food-details">
                         <h4>Chicken Momo</h4>
-                        <p>Tender chicken cooked in a rich, creamy tomato-based sauce with a perfect balance of spices.</p>
+                        <p>Creamy, flavorful chicken in rich tomato sauce.</p>
                         <div>
                             <p>Rs. <span>250/-</span></p>
                         </div>
@@ -47,7 +63,7 @@
                 <div class="food-items tandori">
                     <div class="food-details">
                         <h4>Tandoori Momo</h4>
-                        <p>Smoky, succulent chicken marinated in aromatic spices and grilled to perfection.</p>
+                        <p>Smoky, grilled chicken marinated in spices.</p>
                         <div>
                             <p>Rs. <span>300/-</span></p>
                         </div>
@@ -59,7 +75,7 @@
                 <div class="food-items paneer">
                     <div class="food-details">
                         <h4>Paneer Momo</h4>
-                        <p>Flavorful paneer marinated with rich spices and grilled for a satisfying vegetarian option.</p>
+                        <p>Grilled paneer marinated in aromatic spices.</p>
                         <div>
                             <p>Rs. <span>210/-</span></p>
                         </div>
@@ -71,7 +87,7 @@
                 <div class="food-items jhol">
                     <div class="food-details">
                         <h4>Jhol Momo</h4>
-                        <p>A tangy and spicy broth, bursting with bold flavors that pair perfectly with our dishes.</p>
+                        <p>Tangy, juicy and spicy broth full of bold flavors.</p>
                         <div>
                             <p>Rs. <span>260/-</span></p>
                         </div>
@@ -83,7 +99,7 @@
                 <div class="food-items fried">
                     <div class="food-details">
                         <h4>Fried Momo</h4>
-                        <p>These crispy, golden pockets are stuffed with a savory filling of your choice, be it chicken or vegetables.</p>
+                        <p>Crispy, golden pockets filled with savory filling. </p>
                         <div>
                             <p>Rs. <span>220/-</span></p>
                         </div>
@@ -95,7 +111,7 @@
                 <div class="food-items kurkure">
                     <div class="food-details">
                         <h4>Kurkure Momo</h4>
-                        <p>Crispy, spiced snack that offers the perfect crunch to complement your meal.</p>
+                        <p>Crispy, spiced snack for a perfect crunch.</p>
                         <div>
                             <p>Rs. <span>230/-</span></p>
                         </div>
@@ -107,5 +123,6 @@
             </div>
         </div>
     </main>
+    <script src="app.js"></script>
 </body>
 </html>

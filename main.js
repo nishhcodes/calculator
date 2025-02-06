@@ -9,7 +9,6 @@ const digits = document.querySelectorAll('.numbers');
 const operatorBtn = document.querySelectorAll('.operators');
 const equals = document.querySelector('.equals');
 
-// Clear everything
 clearBtn.addEventListener('click', () => {
   operator = '';
   previousValue = '';
@@ -18,25 +17,24 @@ clearBtn.addEventListener('click', () => {
   screenDigits.textContent = '';
 });
 
-// Handle digit input
 digits.forEach(button => {
   button.addEventListener('click', () => {
+
     if (operator === '' && previousValue !== '') {
-      // New calculation after result
+      
       screenDigits.textContent = '';
       previousValue = '';
     }
-    if (screenDigits.textContent.length < 5) { // Limit input length
+    if (screenDigits.textContent.length < 5) { 
         screenDigits.textContent += button.textContent;
       }  
     });
 });
 
-// Handle operator input
 operatorBtn.forEach(op => {
   op.addEventListener('click', () => {
-    if (screenDigits.textContent === '') return; // Prevent empty operand
-    
+    if (screenDigits.textContent === '') return; 
+
     operator = op.textContent;
     operatorSymbol.textContent = operator;
     previousValue = screenDigits.textContent;
@@ -44,12 +42,11 @@ operatorBtn.forEach(op => {
   });
 });
 
-// Handle equals
 equals.addEventListener('click', () => {
-  if (!operator || !previousValue) return; // No operation requested
-  
+  if (!operator || !previousValue) return;
+
   currentValue = screenDigits.textContent;
-  if (currentValue === '') return; // Second operand missing
+  if (currentValue === '') return;
   
   const num1 = parseFloat(previousValue);
   const num2 = parseFloat(currentValue);
@@ -62,12 +59,11 @@ equals.addEventListener('click', () => {
   const result = calculate(num1, num2);
   
   screenDigits.textContent = result;
-  previousValue = result.toString(); // Allow chaining
+  previousValue = result.toString();
   operator = '';
   operatorSymbol.textContent = '';
 });
 
-// Calculation logic
 function calculate(num1, num2) {
   switch (operator) {
     case '+': return num1 + num2;

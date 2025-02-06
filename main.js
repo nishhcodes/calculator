@@ -26,8 +26,10 @@ digits.forEach(button => {
       screenDigits.textContent = '';
       previousValue = '';
     }
-    screenDigits.textContent += button.textContent;
-  });
+    if (screenDigits.textContent.length < 5) { // Limit input length
+        screenDigits.textContent += button.textContent;
+      }  
+    });
 });
 
 // Handle operator input
